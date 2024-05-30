@@ -1,0 +1,67 @@
+<app-navbar></app-navbar>
+<app-sidenav></app-sidenav>
+
+<mat-sidenav-container autosize>
+    <div class="container">
+        <form [formGroup]="form" (ngSubmit)="onSubmit()">
+            <div class="row conent">
+                <div class="col-2"></div>
+                <div class="col-10">
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="text-center" style="margin-top: 20px;">
+                                <img [src]="imageUrl" class="rounded-circle" width="200px" height="200px" alt="...">
+                                <div class="text-danger" *ngIf="messageError">{{messageError}}</div>
+                            </div>
+                            <div class="d-grid gap-2 col-6 mx-auto mt-5">
+                                <input type="file" id="fileInput" (change)="onFileSelected($event)" hidden>
+                                <button class="btn btn-customize" (click)="triggerFileInputClick()" type="button">
+                                    {{ studentId ? "Modifier" : "Ajouter" }}
+                                    photo</button>
+                            </div>
+                        </div>
+    
+                        <div class="col-6 mt-5">
+                            <h1>{{ studentId ? 'Modifier' : 'Ajouter' }} étudiant</h1>
+                            <div class="row">
+                                <div class="col">
+                                    <mat-form-field appearance="outline" class="nom">
+                                        <mat-label>Nom</mat-label>
+                                        <input matInput formControlName="nom">
+                                    </mat-form-field>
+                                </div>
+                                <div class="col">
+                                    <mat-form-field appearance="outline" class="prenom">
+                                        <mat-label>Prenom</mat-label>
+                                        <input matInput formControlName="prenom">
+                                    </mat-form-field>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <mat-form-field class="example-full-width date-select" appearance="outline">
+                                    <mat-label>Date de naissance</mat-label>
+                                    <input matInput [matDatepicker]="picker" formControlName="dateNaissance">
+                                    <mat-hint>MM/DD/YYYY</mat-hint>
+                                    <mat-datepicker-toggle matIconSuffix [for]="picker">
+                                        <mat-icon matDatepickerToggleIcon>keyboard_arrow_down</mat-icon>
+                                    </mat-datepicker-toggle>
+                                    <mat-datepicker #picker></mat-datepicker>
+                                </mat-form-field>
+                            </div>
+                            <div class="row mt-5" *ngIf="!isLoading; else spinner">
+                                <button class="btn btn-form" type="submit">{{ studentId ? 'Mettre à jour' : 'Enregistrer'
+                                    }}</button>
+                            </div>
+                            <ng-template #spinner>
+                                <div class="spinner">
+                                    <mat-spinner [diameter]="30"></mat-spinner>
+                                </div>
+                            </ng-template>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </form>
+    </div>
+</mat-sidenav-container>

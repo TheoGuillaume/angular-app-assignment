@@ -1,0 +1,60 @@
+:host {
+    display: flex;
+    justify-content: center;
+    margin: 100px 0px;
+  }
+
+  .large-card {
+    width: 350px; /* Largeur personnalisée du card */
+  }
+
+  .large-input {
+    width: 300px; /* Largeur personnalisée des inputs par rapport à la largeur du card */
+    /* -32px pour compenser les marges par défaut des mat-form-field */
+  }
+
+  .mat-form-field {
+    width: 100%;
+    min-width: 300px;
+  }
+
+  mat-card-title,
+  mat-card-content {
+    display: flex;
+    justify-content: center;
+  }
+
+  .error {
+    /*padding: 16px;*/
+    width: 300px;
+    color: red;
+   /*background-color: red;*/
+  }
+
+  .button-container {
+    display: flex;
+    justify-content: center;
+    width: 100%; /* Assurez-vous que le conteneur prend toute la largeur */
+}
+
+.button-container div,
+.button-container .spinner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%; /* Assurez-vous que les éléments à l'intérieur prennent toute la largeur */
+}
+
+.button-container .spinner {
+    height: 36px; /* Même hauteur que le bouton pour que le spinner prenne sa place */
+}
+
+.btn-style{
+  background-color: #126f7e;
+  border-radius: 17px;
+}
+
+.text-conn{
+  color: white;
+}
+

@@ -1,0 +1,121 @@
+.example-sidenav {
+    display: flex;
+    flex-direction: column;
+    user-select: none;
+    width: 15%;
+    height: 110vh;
+  }
+  
+  .mat-mdc-list-item-icon {
+    color: rgba(167, 75, 75, 0.54);
+  }
+
+  .liste-nav{
+    background-color: #c1c6c6;
+    height: 100%;
+    width: 100%
+  }
+
+  .assignment-texte{
+    font-size: 30px;
+    padding: 4px;
+    font-style: italic;
+    background-position: center;
+  }
+
+.logo-container {
+    display: flex;
+    flex-direction: column; /* Arrange logo and text vertically */
+    align-items: center; /* Center align horizontally */
+    justify-content: center; /* Center align vertically */
+    padding: 10px;
+}
+
+
+.assignment-logo {
+    height: 70x; /* Adjust the height as needed */
+    width: 70px; /* Make sure width matches height for a round shape */
+    border-radius: 50%; /* Make the image round */
+    margin-bottom: 8px; /* Space between the logo and the text */
+}
+
+.assignment-texte {
+    font-size: 24px; /* Adjust font size as needed */
+    font-style: italic;
+    text-align: center; /* Center align the text */
+}
+
+.subheader {
+  display: flex;
+  align-items: center;
+  padding: 8px 0;
+}
+
+.subheader mat-icon {
+  margin-right: 8px; /* Space between the icon and the text */
+}
+
+.subheader span {
+  font-size: 18px; /* Adjust font size as needed */
+}
+
+.section {
+  margin-bottom: 16px; /* Add space between sections */
+}
+
+.assignment-item,
+.etudiant-item,
+.matiere-item {
+    margin-left: 16px; /* Add left margin to indent items */
+    display: flex; /* Use flexbox */
+    align-items: center; /* Center align vertically */
+}
+
+.assignment-item mat-icon,
+.etudiant-item mat-icon,
+.matiere-item mat-icon {
+    margin-right: 8px; /* Space between icon and text */
+}
+
+.assignment-item span,
+.etudiant-item span,
+.matiere-item span {
+    font-size: 16px; /* Adjust font size as needed */
+}
+
+.mat-list-item {
+  display: flex;
+  justify-content: space-between; /* Space out the items */
+  padding: 8px 0; /* Add padding for list items */
+}
+
+.mat-list-item div {
+  display: flex;
+  align-items: center;
+}
+
+.mat-list-item mat-icon {
+  margin-right: 8px; /* Space between the icon and the text */
+}
+
+.hr{
+  margin-top: 35px;
+}
+
+.nav-link {
+  display: block;
+  padding: 0;
+  color: #35373a;
+  text-decoration: none;
+  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
+}
+
+/* Change la couleur en blanc lors du survol */
+.nav-link:hover {
+  color: #126f7e;
+}
+
+/* Change la couleur en blanc lorsqu'un lien est activé (clic) */
+.nav-link:active {
+  color: #126f7e;
+}

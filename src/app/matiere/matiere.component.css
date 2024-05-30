@@ -1,0 +1,71 @@
+
+  .custom-table{
+    margin-top: 20px;
+  }
+
+  .btn-light{
+    background-color: #126f7e;
+    color: white;
+  }
+  .example-button-row {
+    display: flex;
+    justify-content: flex-end; /* Aligner les boutons à droite */
+    align-items: center; /* Centrer verticalement */
+    width: 100%;
+}
+
+  
+  /* .example-button-row .mat-mdc-button-base {
+    margin: 8px 8px 8px 0;
+  } */
+
+  .example-flex-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .example-button-container {
+    display: flex;
+    justify-content: center;
+    width: 120px;
+  }
+
+  .edit{
+    background-color: #e2b81b;
+  }
+
+  .delete{
+    background-color: #f61100;
+  }
+
+  .assignment-logo {
+    height: 50x; /* Adjust the height as needed */
+    width: 50px; /* Make sure width matches height for a round shape */
+    border-radius: 50%; /* Make the image round */
+  }
+
+  h1{
+    font-size: 35px;
+    height: 55px;
+    font-style: italic;
+  }
+
+  .spinner-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px; /* Adjust height as needed to vertically center */
+}
+
+.btn-customize {
+   background-color:  #c1c6c6;
+}
+
+.detail{
+  background-color:  #c1c6c6;
+}
+
+.content {
+  margin-top: 3%;
+}

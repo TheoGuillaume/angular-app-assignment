@@ -1,0 +1,21 @@
+.content {
+    margin-top: 3%;
+}
+
+.form{
+    display: grid;
+    margin-top: 14px;
+}
+
+.btn-content{
+    display: flex;
+    justify-content: center;
+}
+
+.btn-form{
+    background-color:#126f7e;
+    width: 30%;
+    display: block;
+    margin-left: auto; 
+    margin-right: auto; 
+ }

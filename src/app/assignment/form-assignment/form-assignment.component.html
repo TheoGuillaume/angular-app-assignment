@@ -1,0 +1,83 @@
+<app-navbar></app-navbar>
+<app-sidenav></app-sidenav>
+<mat-sidenav-container autosize>
+    <div class="container">
+        <div class="row">
+            <div class="col-2">
+
+            </div>
+            <div class="col-10 content">
+                <h2 style="text-align: center;font-size: 39px;">Modifier</h2>
+                <div class="row">
+                    <form class="form">
+                        <mat-form-field appearance="outline" class="nom">
+                            <mat-label>Titre et date rendu</mat-label>
+                            <input matInput formControlName="nom">
+                        </mat-form-field>
+                        <div class="row">
+                            <div class="col-6" style="display: grid;">
+                                <mat-form-field appearance="outline" class="note">
+                                    <mat-label>Note</mat-label>
+                                    <input matInput type="number" formControlName="note" min="0" max="20"> 
+                                </mat-form-field>
+                            </div>
+                            <div class="col-6" style="display: grid;">
+                                <mat-form-field  appearance="outline">
+                                    <mat-label>Date rendu</mat-label>
+                                    <input matInput [matDatepicker]="picker" formControlName="daterendu">
+                                    <mat-hint>MM/DD/YYYY</mat-hint>
+                                    <mat-datepicker-toggle matIconSuffix [for]="picker">
+                                        <mat-icon matDatepickerToggleIcon>keyboard_arrow_down</mat-icon>
+                                    </mat-datepicker-toggle>
+                                    <mat-datepicker #picker></mat-datepicker>
+                                </mat-form-field>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-6" style="display: grid;">
+                                <mat-form-field class="example-full-width"  appearance="outline">
+                                    <mat-label>Description</mat-label>
+                                    <textarea matInput formControlName="description"></textarea>
+                                </mat-form-field>
+                            </div>
+                            <div class="col-6" style="display: grid;">
+                                <mat-form-field class="example-full-width"  appearance="outline">
+                                    <mat-label>Remarque</mat-label>
+                                    <textarea matInput formControlName="remarque"></textarea>
+                                </mat-form-field>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-6" style="display: grid;">
+                                <mat-form-field appearance="outline">
+                                    <mat-label>Séléctionner etudiant</mat-label>
+                                    <mat-select formControlName="etudiant">
+                                        @for (etudiant of listeEtudiant; track etudiant) {
+                                            <mat-option [value]="etudiant._id">{{etudiant.nom}} {{etudiant.prenom}}</mat-option>
+                                          }
+                                    </mat-select>
+                                </mat-form-field>
+                            </div>
+                            <div class="col-6" style="display: grid;">
+                                <mat-form-field appearance="outline">
+                                    <mat-label>Séléctionner matière</mat-label>
+                                    <mat-select formControlName="matiere">
+                                        @for (matiere of listMatiere; track matiere) {
+                                            <mat-option [value]="matiere._id">Matiere :{{matiere.nom}} / Prof :{{matiere.professeur}}</mat-option>
+                                          }
+                                    </mat-select>
+                                </mat-form-field>
+                            </div>
+                        </div>
+                        <div class="row btn-content">
+                            <button class="btn btn-form" type="submit">Ajouter</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <!-- <div class="col-2">
+
+            </div> -->
+       </div>
+    </div>
+</mat-sidenav-container>

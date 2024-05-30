@@ -1,0 +1,39 @@
+.content {
+   margin-top: 3%;
+ }
+
+  .image {
+    height: 400x; /* Adjust the height as needed */
+    width: 400px; /* Make sure width matches height for a round shape */
+    border-radius: 50%; /* Make the image round */
+  }
+
+  .btn-customize {
+    background-color:  #c1c6c6;
+ }
+
+ .nom{
+    width: 100%;
+ }
+
+ .prenom{
+    width: 100%;
+ }
+
+ .btn-form{
+    background-color:#126f7e;
+ }
+
+ h1{
+    font-size: 35px;
+    height: 55px;
+    font-style: italic;
+  }
+
+  .spinner {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 100%;
+   height: 36px; /* Assurez-vous que les éléments à l'intérieur prennent toute la largeur */
+}

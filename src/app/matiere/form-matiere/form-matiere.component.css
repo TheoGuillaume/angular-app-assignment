@@ -1,0 +1,40 @@
+
+h1 {
+    font-size: 30px;
+    font-style: italic;
+}
+
+.photo {
+    margin-top: 4%;
+    margin-left: -4%;
+}
+
+.btn-customize{
+    background-color:  #c1c6c6;
+}
+
+.btn-photo {
+    margin-top: 2%;
+}
+
+.titre-matiere {
+        margin-top: 4%;
+    margin-left: -25%;
+    width: 82%;
+}
+
+.titre-prof {
+margin-left: -25%;
+width: 82%;
+}
+
+.btn-form{
+    background-color: #126f7e;
+    /* margin-left: 8%;
+    width: 19%;
+    margin-top: auto; */
+ }
+
+ .content {
+    margin-top: 1%;
+  }

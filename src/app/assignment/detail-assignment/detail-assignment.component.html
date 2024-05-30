@@ -1,0 +1,87 @@
+<app-navbar></app-navbar>
+<app-sidenav></app-sidenav>
+<mat-sidenav-container>
+    <div class="container">
+        <div class="row" style="margin-top: 2%; margin-left: 16%;">
+            <div class="col-2"></div>
+            <div *ngIf="isLoading; else row" class="spinner-container">
+              <mat-spinner></mat-spinner>
+           </div>
+            <div class="col-10">
+                <ng-template class="row" #row>
+                    <div class="text-center" style="font-size: 20px;">{{ data.titre }}</div>
+                    <div class="col-6">
+                      <img [src]="imageUrl" class="rounded-circle" style="margin-left: 21%;" width="150px" height="150px">
+                      <div class="row" style="margin-top: 2%;">
+                          <div class="" style="margin-left: 21%;font-size: 21px;">
+                              <span>{{ data.auteur.nom }} {{ data.auteur.prenom }}</span>
+                          </div>
+                      </div>
+                      <div class="row" style="margin-top: 5%;">
+                          <div style="margin-left: 3%;font-size: 15px;"><span>Détail assignment</span></div>
+                          <mat-divider></mat-divider>
+                          <div class="col-4">
+                            <span style="font-size: 15px;">Description :</span>
+                          </div>
+                          <div class="col-8">
+                            <span style="font-size: 10px;">{{data.description}}</span>
+                            <mat-divider></mat-divider>
+                          </div>
+                          <div class="col-4">
+                            <span style="font-size: 15px;">Remarque :</span>
+                          </div>
+                          <div class="col-8">
+                            <span style="font-size: 10px;">{{data.remarque ? data.remarque : "Aucun remarque"}}</span>
+                            <mat-divider></mat-divider>
+                          </div>
+                          <div class="col-4">
+                            <span style="font-size: 15px;">Date rendu :</span>
+                          </div>
+                          <div class="col-8">
+                            <span style="font-size: 10px;">{{data.dateDeRendu | date:'dd/MM/yyyy'}}</span>
+                            <mat-divider></mat-divider>
+                          </div>
+                         <div class="col-6" style="margin-top: 5%;">
+                          <span style="font-size: 15px;">Rendu :</span>
+                          </div>
+                          <div class="col-6" style="margin-top: 5%;"> 
+                            <ng-container *ngIf="!data.rendu">
+                              <button mat-flat-button color="warn">Pas encore rendu</button>
+                            </ng-container>
+                            <ng-container *ngIf="data.rendu">
+                              <span style="font-size: 12px;color:green">Rendu</span>
+                            </ng-container>
+                          </div>
+                        <div class="col-6" style="margin-top: 17%;">
+                             <span style="font-size: 27px;">Note :</span>
+                          </div>
+                          <div class="col-6" style="margin-top: 17%;">
+                            <span style="font-size: 27px;">{{ data.note ? data.note : 0 }} / 20</span>
+                         </div>
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <img [src]="imageMatiere" class="" width="200px" height="150px" style="margin-left: 45%;">
+                      <div class="row" style="margin-left: 45%;">
+                        <div class="" style="margin-left: 18%;font-size: 21px;">
+                            <span>{{ data.matiere.nom }}</span>
+                        </div>
+                      </div>
+                      <div class="row" style="margin-top: 7%;margin-left: 7%;">
+                        <div style="margin-left: 3%;font-size: 15px;"><span>Détail matière</span></div>
+                        <mat-divider></mat-divider>
+                        <div class="photo" style="margin-left: 20%;margin-top: 2%;">
+                          <img [src]="imageProf" class="rounded-circle" width="150" height="150px">
+                        </div>
+                        <div class="col-2">
+                        </div>
+                        <div class="col-8">
+                          <span style="font-size: 14px;">Professeur(re) : {{ data.matiere.professeur }}</span>
+                        </div>
+                      </div>
+                    </div>
+                </ng-template>
+            </div>
+        </div>
+    </div>
+</mat-sidenav-container>
