@@ -18,7 +18,7 @@ import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 })
 export class LoginComponent {
   form: FormGroup = new FormGroup({
-    email: new FormControl('guillaume1.haisoa@gmail.com'),
+    email: new FormControl('guillaume.haisoa@gmail.com'),
     mdp: new FormControl('123456'),
   });
   error: string | null | undefined;
